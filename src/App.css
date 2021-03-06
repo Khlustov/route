@@ -36,3 +36,77 @@
     transform: rotate(360deg);
   }
 }
+
+#root {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+nav {
+  width: 15%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;  
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.content {
+  width: 85%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-left: 1px solid black;
+}
+
+.decription {
+  font-size: 24px;
+}
+
+
+/* Homework 1 */
+.text {
+  font-style: italic;
+}
+
+.big {
+  width: 200px;
+  height: 200px;
+  background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.medium {
+  width: 150px;
+  height: 150px;
+  background-color: goldenrod;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.small {
+  width: 100px;
+  height: 100px;
+  background-color: plum;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
