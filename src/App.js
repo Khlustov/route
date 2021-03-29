@@ -18,6 +18,9 @@ import Button from './components/button'
 import Clock from './components/clock'
 import Counter from './components/counter'
 import UsersList from './components/users-list'
+import Registration from './components/registration'
+import CheckList from './components/checklist'
+import Currency from './components/currency';
 
 function App() {
   return (
@@ -52,6 +55,12 @@ function App() {
             <li>
               <Link to="/users">Users list</Link>
             </li>
+            <li>
+              <Link to="/registration">Registration</Link>
+            </li>
+            <li>
+              <Link to="/checklist">Check list</Link>
+            </li>
             
           </ul>
         </nav>
@@ -60,6 +69,14 @@ function App() {
             renders the first one that matches the current URL. */}
         
         <Switch>
+
+          <Route path="/checklist">
+            <Homework10 />
+          </Route>
+
+          <Route path="/registration">
+            <Homework9 />
+          </Route>
 
           <Route path="/users">
             <Homework8 />
@@ -108,6 +125,7 @@ function Home() {
     <div  className = 'pages pages__main'>
       <h2>{moment().format('LL')}</h2>
       <Clock />
+      <Currency />
     </div>
   );
 }
@@ -208,6 +226,25 @@ function Homework8() {
        text = 'Получить данные о пользователе с помощью API запроса на сервер'
       />
       <UsersList />
+    </div>
+  );
+}
+
+function Homework9() {
+  return (
+    <div  className = 'pages'>
+      <Description
+       text = 'Написать компонент для регистрации пользователя'
+      />
+      <Registration />
+    </div>
+  );
+}
+
+function Homework10() {
+  return (
+    <div  className = 'pages'>
+      <CheckList title="plan for today" />
     </div>
   );
 }

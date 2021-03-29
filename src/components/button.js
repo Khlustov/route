@@ -1,4 +1,5 @@
-import Reacr, {Component} from 'react'
+import React, {Component} from 'react'
+import Btn from './button-component'
 
 class Button extends Component {
     
@@ -24,7 +25,10 @@ class Button extends Component {
     render() {
         return(
         <div>
-            <button onClick = {this.showLoader}>Say HI</button>
+            <Btn 
+            action = {this.showLoader}
+            label = 'Say hi'
+            />
             {this.state.loading && (<div className = 'loader'></div>)}
             {this.state.greeting !== '' && (<span>{this.state.greeting}</span>)}
         </div>

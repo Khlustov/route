@@ -13,23 +13,12 @@ const UsersList = () => {
             console.log(error);
         }
     }
-
-    const onLoadUsersAvatar = async() => {
-        try{
-            const resp = await axios.get('https://reqres.in/api/users?page=2');
-            setUsers(resp.data.data)
-            } catch(error) {
-            console.log(error);
-        }
-    }
-
-
-   
+      
     return (
         <div>
             <button onClick = {onLoadUsersInfo}>Get users list</button>
             {users.map((item) => {
-                return <div key = {item.id}>{item.first_name} {item.last_name}<img key = {item.id} src = {item.avatar} /></div>
+                return <div key = {item.id}>{item.first_name} {item.last_name}<img key = {item.id} src = {item.avatar} alt = 'img'/></div>
             })}
         </div>
     )  
