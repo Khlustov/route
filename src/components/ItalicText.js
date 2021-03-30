@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-class Text extends React.Component {
+class Text extends Component {
   
     state = {
       italic: false

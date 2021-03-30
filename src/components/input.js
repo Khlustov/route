@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import Btn from './button-component'
 
 class Input extends Component {
 
@@ -24,7 +25,10 @@ class Input extends Component {
             <div>
                 <input type = 'text' placeholder = 'login' onChange = {this.onChangeLogin} value = {this.state.login}/>
                 <input type = 'password' placeholder = 'password' onChange = {this.onChangePassword} value = {this.state.password}/>
-                <button onClick = {this.clearInputs}>Clear</button>
+                <Btn 
+                action = {this.clearInputs}
+                label = 'Clear'
+                />
             </div>
         )
     }
