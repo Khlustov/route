@@ -21,6 +21,7 @@ import UsersList from './components/users-list'
 import Registration from './components/registration'
 import CheckList from './components/checklist'
 import Currency from './components/currency';
+import Quiz from './components/qiuz';
 
 function App() {
   return (
@@ -61,6 +62,9 @@ function App() {
             <li>
               <Link to="/checklist">Check list</Link>
             </li>
+            <li>
+              <Link to="/quiz">Quiz</Link>
+            </li>
             
           </ul>
         </nav>
@@ -69,6 +73,9 @@ function App() {
             renders the first one that matches the current URL. */}
         
         <Switch>
+          <Route path="/quiz">
+            <Homework11 />
+          </Route>
 
           <Route path="/checklist">
             <Homework10 />
@@ -245,6 +252,14 @@ function Homework10() {
   return (
     <div  className = 'pages'>
       <CheckList title="plan for today" />
+    </div>
+  );
+}
+
+function Homework11() {
+  return (
+    <div  className = 'pages'>
+      <Quiz title="some quiz" />
     </div>
   );
 }
